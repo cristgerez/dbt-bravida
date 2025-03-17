@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_yellow_taxi
+    database: RAW_YELLOW_TAXI
+    schema: PUBLIC
+    tables:
+      - name: raw_taxi_trips
+
+models:
+  - name: stg_raw_taxi_trips
+    description: "Unified staging table for all raw taxi trips from 2017-2019"
+    tests:
+      - dbt_expectations.expect_column_pair_values_A_to_be_greater_than_B:
+          column_A: "tpep_dropoff_datetime"
+          column_B: "tpep_pickup_datetime"
+          or_equal: True
+          severity: warn
+    columns:
+      - name: trip_id
+        description: "Unique trip identifier"
+        tests:
+          - unique
+          - not_null
