@@ -89,9 +89,15 @@ LIMIT 10
      Instead of doing trip_duration_minutes > 0 I added a test comparing "tpep_dropoff_datetime" and "tpep_pickup_datetime".
 
    4.c Added a [packages.yml](https://github.com/cristgerez/dbt-bravida/blob/main/packages.yml) and imported 2 packages dbt_utils and dbt_expectations.
+   
 5. I created the query for the creaation of the [stagin table](https://github.com/cristgerez/dbt-bravida/blob/main/models/staging/stg_raw_taxi_trips.sql)
+
    5.b I added the trip_id column using a dbt_utils function called generate_surrogate_key that generates a hash using the content of selected columns
+
    5.c I renamed all columns to be snake case
+
    5.d Casted tpep_dropoff_datetime and tpep_pickup_datetime as TIMESTAMP
+
    5.e Added a deduplication query
+   
 6. Once I had my staging phase, I added a [mart folder](https://github.com/cristgerez/dbt-bravida/tree/main/models/mart) with my final with the schema.yml and the [facts_taxi_trips.sql](https://de207.us1.dbt.com/develop/70471823440175/projects/70471823449511) to generate the final table
