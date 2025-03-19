@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: facts_taxi_trips
+    description: "Aggregated taxi trip facts, including average trip duration by hour and day of the week."
