@@ -100,4 +100,4 @@ LIMIT 10
 
    5.e Added a deduplication query
    
-6. Once I had my staging phase, I added a [mart folder](https://github.com/cristgerez/dbt-bravida/tree/main/models/mart) with my final with the schema.yml and the [facts_taxi_trips.sql](https://de207.us1.dbt.com/develop/70471823440175/projects/70471823449511) to generate the final table
+6. Once I had my staging view prepated, I added a [mart folder](https://github.com/cristgerez/dbt-bravida/tree/main/models/mart) with my final with the schema.yml and the [facts_taxi_trips.sql](https://de207.us1.dbt.com/develop/70471823440175/projects/70471823449511) to generate the final table.
