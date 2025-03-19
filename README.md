@@ -1,10 +1,10 @@
-###Bravida Assigment
+### Bravida Assigment
 
-##Structure of the solution:
+## Structure of the solution:
 
 ![Bravida Board](https://github.com/user-attachments/assets/9d7c1c37-9c71-44ad-953c-79ecbc998c8d)
 
-##Snowflake
+## Snowflake
 1.I created an External Stage in a schema I created previously. This way I linked the public azure object storage to my Snowflake account azure://azureopendatastorage.blob.core.windows.net/nyctlc/yellow
 
 2.I took a look at the structure of the storage and used the following query to see the structure of the data:
@@ -79,7 +79,7 @@ LIMIT 10
 ;
 ```
 
-##dbt
+## dbt
 1. Configured the connections needed [Github, Snowflake]
 2. Created a developtment environment and initiated the project
 3. Edited some basic configuration in the dbt_project and created some useful folders in models
